@@ -4,6 +4,7 @@ isPartTime=2
 empRateperHr=20
 emp_check=$(( RANDOM%3 ))
 workingday_per_month=20
+
 case $emp_check in
      
      $isFullTime)
@@ -16,6 +17,15 @@ case $emp_check in
             empHrs=0
                ;;
 esac
+
+for ((i=1 ; i<=20 ; i++))
+do
+    res=$(($empRateperHr*$empHrs))
+
+    echo "days:"$i=$(($res*$i))
+
+done
+
 
 salary_per_month=$(($empRateperHr*$empHrs*$workingday_per_month))
 
