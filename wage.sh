@@ -22,11 +22,12 @@ for ((i=1 ; i<=20 ; i++))
 do
     res=$(($empRateperHr*$empHrs))
 
-    echo "days:"$i=$(($res*$i))
+    echo "Salary per day:"$i=$(($res*$i)) "Rs"
 
+
+
+echo " working hours=" $(($i*$empHrs)) "Hrs"
 done
-
-
 salary_per_month=$(($empRateperHr*$empHrs*$workingday_per_month))
 
 
