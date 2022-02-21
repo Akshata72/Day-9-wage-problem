@@ -10,6 +10,7 @@ then
 
 fi
 isFullTime=1
+isPartTime=2
 empRateperHr=20
 
 random_check=$(( RANDOM%3 ))
@@ -17,12 +18,16 @@ if (( $random_check==$isFullTime ))
 
 then
      empHrs=8
+elif (( $random_check==$isPartTime ))
+
+then
+     empHrs=4
+else
+     empHrs=0
+fi
 
 salary=$(($empRateperHr*$empHrs))
 
 echo "$salary"
 
 
-else
-  echo "Employee is Absent"
-fi
