@@ -1,4 +1,4 @@
-
+#program of Employee Wage
 echo "Welcome to Employee Wage Computation Program "
 
 random_num=$(( RANDOM%2 ))
